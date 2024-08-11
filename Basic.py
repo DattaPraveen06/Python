@@ -11,3 +11,5 @@ print(f'Apples : {Apples}', f'Oranges : {Oranges}', f'Total :{c} Units')
 #-------------------------------------------------------------------------------
 
 # 2)I have a string "hello world" I need the following output "world hello"
+
+d =
