@@ -56,3 +56,21 @@ if gender == 'F' and age <= 30 and experience <= 1 and married == 'N':
     print("You are eligible")
 else:
     print("You are Not eligible")
+
+#----------------------------------------------------------------------------------------------------
+
+# 3)The company is planning to give hike in salaries to its employees. The following are the conditions.
+
+# If the employee is manager the hike is 10%
+# If the employee is not a manager the hike is 20%
+# Accept the salary and the position (Manager /Others), calculate the hike and display the new salary
+
+position = input('enter your position: ')
+sal = int(input('enter salary: '))
+
+if(position == 'manager'):
+    hike = sal * 0.10
+else:
+    hike = sal * 0.20
+
+print(f'Your New sal = {int(sal+hike)}')
