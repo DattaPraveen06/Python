@@ -74,38 +74,3 @@ print(f'{int(F)}°F')
 miles = 10
 km = miles * 1.60934
 print(km)
-
-# -------------------------------------------------------------------------------
-#11)The Corporation has listed the requirement for shortling the candidates for a worker’s job. The conditions are as under:
-
-# Applicant should be male
-# Applicants should be between 20 and 25 years of age.
-# Applicants should have been born after 2024 January 1
-#
-# If the applicant meets the above condition, display the message “Shortlisted”. Else display “Not Shortlisted”
-#
-# Accept the details of gender (M/F), age (in years) and date or birth (dd/mm/yyyy) from the user.
-#
-# Discussions
-#
-# gender = input("enter gender:: ")
-# age = int(input("enter age:: "))
-# dob = input("Enter dob: ")
-#
-# MALE = "Male"
-# is_male = gender == MALE:
-#     if (is_male):
-#         print("Candidate is Male")
-# is_within_age = age >= 20 and age <= 25
-# if is_within_age:
-#     print("Meets age condition")
-#
-# DOB = "01/01/2024"  #DD/MM/YYYY #date function
-#
-# is_dob_valid = dob == DOB
-#
-# if (is_male and is_within_age and is_dob_valid):
-#
-#
-# print(f'Gender is {gender} + " Age is : {age} + " Date of birth : " + {dob}')
-
