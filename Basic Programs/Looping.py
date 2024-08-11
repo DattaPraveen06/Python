@@ -74,3 +74,19 @@ else:
     hike = sal * 0.20
 
 print(f'Your New sal = {int(sal+hike)}')
+
+#----------------------------------------------------------------------------------------------------
+
+# 4)Create a new string made of the first, middle, and last characters of each input string
+
+string = input('enter a string:')
+s1 = string[0]
+s2 = string[-1]
+l = len(string)
+if l%2 ==1:
+    l1 = l/2
+else:
+    l1 = l/2 - 1
+
+s3 = string[int(l1)]
+print(f'first: {s1} , middle: {s3}, last: {s2}')
