@@ -39,4 +39,20 @@ if shortlisted:
 else:
     print("Not Shortlisted")
 
+#----------------------------------------------------------------------------------------------------
     
+# 2)Write a program to determine the eligibility of the candidates for the position of Receptionist.
+
+# Applicant should not be married, should be Female, should be less than 30 years
+# or age and should not have more than 1 years experience.
+
+
+gender = input('Enter gender: ')
+age = int(input('Enter age: '))
+married = input('Y or N: ')
+experience = int(input('Enter work exp: '))
+
+if gender == 'F' and age <= 30 and experience <= 1 and married == 'N':
+    print("You are eligible")
+else:
+    print("You are Not eligible")
