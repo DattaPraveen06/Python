@@ -90,3 +90,10 @@ else:
 
 s3 = string[int(l1)]
 print(f'first: {s1} , middle: {s3}, last: {s2}')
+
+#----------------------------------------------------------------------------------------------------
+# 5)Reverse a given string
+
+original = "Hello, World!"
+reversed= original[::-1]
+print(reversed)
