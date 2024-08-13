@@ -144,3 +144,18 @@ if age >=18 and income >=35000:
     print('we are offering loan to you')
 else:
     print('sorry no loan offered')
+
+#--------------------------------------------------------------------------------------------------------------
+
+# 9) To enroll on an online course a prospective student has to be at least 21 and have passed their qualifying examination.
+    # How old are you?
+    # Have you passed your qualifying examination (Y/N)?
+
+age = int(input("How old are you? "))
+passed_exam = input("Have you passed your qualifying examination (Y/N)? ").strip().upper()
+
+
+if age >= 21 and passed_exam == 'Y':
+    print("You can enroll in the course.")
+else:
+    print("You cannot enroll in the course.")
