@@ -133,3 +133,14 @@ s3 = s3[0] + ' ' + s2 + ' ' + s3[1]
 print(s3)
 
 
+#--------------------------------------------------------------------------------------------------------------
+#8) A bank will offer a customer a loan if they are 18 or over and have an annual income of at least Rs. 35000.
+# Write a program that will, based on a customers age and income,
+# produce a decision on whether they will be offered a loan.
+
+age = int(input('enter your age: '))
+income = int(input('enter your income: '))
+if age >=18 and income >=35000:
+    print('we are offering loan to you')
+else:
+    print('sorry no loan offered')
