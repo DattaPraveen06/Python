@@ -139,7 +139,7 @@ print(s3)
 # produce a decision on whether they will be offered a loan.
 
 age = int(input('enter your age: '))
-income = int(input('enter your income: '))
+income = float(input('enter your income: '))
 if age >=18 and income >=35000:
     print('we are offering loan to you')
 else:
