@@ -97,3 +97,31 @@ print(f'first: {s1} , middle: {s3}, last: {s2}')
 original = "Hello, World!"
 reversed= original[::-1]
 print(reversed)
+
+#----------------------------------------------------------------------------------------------------
+
+
+# 6)Given two strings, s1 and s2. Write a program to create a new string s3
+# made of the first char of s1, then the last char of s2, Next, the second char of s1
+# and second last char of s2, and so on. Any leftover chars go at the end of the result.
+
+s1 = 'hello'
+s2 = 'worlds'
+
+s3 = ''
+i = 0
+l = len(s2)
+
+while i < len(s1) and i < l:
+    s3 += s1[i] + s2[-(i + 1)]  # s2[-(i + 1)] gives the character from the end of s2
+    i += 1
+
+# Append any remaining characters from s1
+if i < len(s1):
+    s3 += s1[i:]
+
+# Append any remaining characters from s2
+if i < l:
+    s3 += s2[:l - i]
+
+print(s3)
