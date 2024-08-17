@@ -76,3 +76,92 @@ for k in range(i, j + 1):
         print(k)
 
 #----------------------------------------------------------------------------------------------------------------------------
+
+# 7)Print the letters ‘a’ to ‘z’ using for loop.
+
+for i in range(ord('a'),ord('z') + 1):
+    print(chr(i),end=' ')
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 8)Print every letter of the string “Rainbow children” using a for loop
+
+name = "Rainbow children"
+for i in name:
+    print(i, end='')
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 9)Print the letters of the word in “Welcome Python” in the reverse order
+
+name = "Welcome Python"
+reverse = name[::-1]
+for i in reverse:
+    print(i,end=' ')
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 10)Print the square of the numbers between 2 to 20
+
+for i in range(2,21):
+    s = pow(i,2)
+    print(f"The square of {i} is {s}")
+    
+
+    # ---------OR--------
+    
+for number in range(2, 21):  # range(2, 21) includes numbers from 2 to 20
+    square = number ** 2
+    print(f"The square of {number} is {square}")
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 11)Print the numbers that are divisible by both 5 and 10 between 1 and 100
+
+for i in range(1,101):
+    if i % 5 == 0 and i % 10 == 0:
+        print(i)
+
+        # -----OR--------
+
+for i in range(1, 101):
+    if i % 10 == 0:    # Since a number divisible by 10 is also divisible by 5
+        print(i)
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 12)Print the multiplication table for the number 5 (up to 5 x 10 = 50)
+
+num = 5
+for i in range(1,11):
+    print(f'{num} * {i} = {num * i}')
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 13)A common formula for calculating weight is as follows:
+#   Men: IBW (kgs) = 22 × (height in meters)
+#   Women: IBW (kgs) = 22 × (height in meters − 10 cm)
+
+#    Print the weight for the heights starting from 1 meter for both Men and Women.
+
+# Define a function to calculate IBW for Men and Women
+def calculate_ibw(height_meters):
+    ibw_men = 22 * height_meters
+    ibw_women = 22 * (height_meters - 0.1)
+    return ibw_men, ibw_women
+
+# Print IBW for heights starting from 1 meter
+height_start = 1.0
+height_end = 2.0  # Let's consider heights up to 2 meters for this example
+height_step = 0.1  # Increment height by 0.1 meters
+
+height = height_start
+while height <= height_end:
+    ibw_men, ibw_women = calculate_ibw(height)
+    print(f"Height: {height:.1f} meters")
+    print(f"  Men: {ibw_men:.2f} kg")
+    print(f"  Women: {ibw_women:.2f} kg")
+    print()
+    height += height_step
+
+#----------------------------------------------------------------------------------------------------------------------------
