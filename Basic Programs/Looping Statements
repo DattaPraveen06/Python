@@ -274,3 +274,20 @@ else:
 
 #----------------------------------------------------------------------------------------------------------------------------
 
+# 17)Write a Python program to find the median of three values.
+# Expected Output:
+# Input first number: 15
+# Input second number: 26
+# Input third number: 29
+# The median is 26.0
+
+e = 15
+d = 26
+c = 29
+
+numbers = [e,d,c]
+numbers.sort()
+median = numbers[1]
+print(median)
+
+#----------------------------------------------------------------------------------------------------------------------------
