@@ -165,3 +165,112 @@ while height <= height_end:
     height += height_step
 
 #----------------------------------------------------------------------------------------------------------------------------
+
+# 14)In task 13, extend the solution to calculate the BMI using the below details.
+# The formula is BMI = kg/m2 where kg is a person's weight in kilograms and m2 is their height in meters squared.
+# A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9.
+# BMI applies to most adults 18-65 years.
+# Display if the person is overweight or not.
+
+
+def calculate_ibw(height_meters):
+    # Calculate Ideal Body Weight for men and women
+    ibw_men = 22 * height_meters
+    ibw_women = 22 * (height_meters - 0.1)
+    return ibw_men, ibw_women
+
+
+def calculate_bmi(weight_kg, height_meters):
+    # Calculate BMI using the formula: BMI = kg / m^2
+    return weight_kg / (height_meters ** 2)
+
+
+def classify_bmi(bmi):
+    # Classify BMI into categories
+    if bmi >= 25.0:
+        return "Overweight"
+    elif 18.5 <= bmi < 25.0:
+        return "Healthy"
+    else:
+        return "Underweight"
+
+
+# Print IBW and BMI for heights starting from 1 meter
+height_start = 1.0
+height_end = 2.0  # Let's consider heights up to 2 meters for this example
+height_step = 0.1  # Increment height by 0.1 meters
+
+height = height_start
+while height <= height_end:
+    ibw_men, ibw_women = calculate_ibw(height)
+
+    bmi_men = calculate_bmi(ibw_men, height)
+    bmi_women = calculate_bmi(ibw_women, height)
+
+    category_men = classify_bmi(bmi_men)
+    category_women = classify_bmi(bmi_women)
+
+    print(f"Height: {height:.1f} meters")
+    print(f"  Men: {ibw_men:.2f} kg, BMI: {bmi_men:.2f} ({category_men})")
+    print(f"  Women: {ibw_women:.2f} kg, BMI: {bmi_women:.2f} ({category_women})")
+    print()
+
+    height += height_step
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+# 15)Write a Python program to convert a month name to a number of days.
+month_name = {
+    'jan': 31,
+    'feb': 28,
+    'mar': 31,
+    'apr': 30,
+    'may': 31,
+    'jun': 30,
+    'jul': 31,
+    'aug': 31,
+    'sep': 30,
+    'oct': 31,
+    'nov': 30,
+    'dec': 31
+}
+
+name = input("enter month name in short form")
+
+if name not in month_name:
+    print("enter correct month")
+else:
+    days = month_name[name]
+    print(f"The number of days in {name} is: {days}")
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+ # 16)Write a Python program to check if a triangle is equilateral, isosceles or scalene.
+# Note :
+# An equilateral triangle is a triangle in which all three sides are equal.
+# A scalene triangle is a triangle that has three unequal sides.
+# An isosceles triangle is a triangle with (at least) two equal sides.
+# Expected Output:
+# Input lengths of the triangle sides:
+# x: 6
+# y: 8
+# z: 12
+# Scalene triangle
+
+
+x = 6
+y = 8
+z = 12
+
+
+if x <= 0 or y <= 0 or z <= 0:
+    print ("Invalid triangle sides")
+elif x == y == z:
+    print('This is equilateral triangle')
+elif x == y or x == z or y == z:
+    print("This is isosceles triangle")
+else:
+    print('This is Scalene triangle')
+
+#----------------------------------------------------------------------------------------------------------------------------
+
