@@ -9,3 +9,84 @@ while Total > 0:
     print(f'You spent Rs.10 and remaining amount is {Total}')
 
 #----------------------------------------------------------------------------------------------------------
+
+# 2) You are required to create a stop watch that displays the elapsed time in the format MM:SS
+#   that stops after a certain condition is met (say when the count reaches 100).
+
+import time
+
+start_time = time.time()  # Record the start time
+count = 0
+
+while count <= 100:
+    elapsed_time = time.time() - start_time
+    minutes = int(elapsed_time) // 60
+    seconds = int(elapsed_time) % 60
+    formatted_time = f"{minutes:02}:{seconds:02}"
+    print(f"\r{formatted_time}", end="")  # Update the time on the same line
+    time.sleep(1)  # Pause for 1 second
+    count += 1  # Increment the count
+
+print("\nStopwatch stopped.")
+
+#----------------------------------------------------------------------------------------------------------
+
+# 3) Print the letters of the word “Himalayan Wild” in separate lines.
+
+n = "Himalayan Wild"
+for i in range(len(n)):
+    print(n[i])
+
+#----------------------------------------------------------------------------------------------------------
+
+# 4) Write a program to list all the number divisible by both 3 and 5 using a while loop.
+# Rewrite the program using for loop
+
+# while
+n = 1
+while n < 100:
+    if n % 3 == 0 and n % 5 == 0:
+        print(n)
+    n += 1
+
+# for loop
+
+for n in range(1, 100):
+    if n % 3 == 0 and n % 5 == 0:
+        print(n)
+
+#----------------------------------------------------------------------------------------------------------
+
+# 5) Write a program that prints the numbers from 0 to 100 in the reverse order using while loop
+
+i = 100
+while i > 0:
+    print(i)
+    i -= 1
+
+#----------------------------------------------------------------------------------------------------------
+
+# 6) Write a program to display the half value of each number from 1 to 100.
+
+i = 1
+while i <= 100:
+    p = i/2
+    print(p)
+    i += 1
+
+#----------------------------------------------------------------------------------------------------------
+
+# 7) Write a program to display the square of the number entered by the user till the user enters “Quit”
+
+
+while True:
+    i = input('Enter a number (or type "Quit" to exit): ')
+    if i == "Quit":
+        break
+    if i.isdigit():  # Check if the input is a non-negative integer
+        num = int(i)
+        print(num * num)
+    else:
+        print("Please enter a valid number or 'Quit' to exit.")
+
+#----------------------------------------------------------------------------------------------------------
