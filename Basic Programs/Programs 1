@@ -90,3 +90,57 @@ while True:
         print("Please enter a valid number or 'Quit' to exit.")
 
 #----------------------------------------------------------------------------------------------------------
+
+# 8) Writing a guessing game that will allow inputs from the user to guess the color of a Bird.
+#   A maximum of 3 attempts is permitted. If the user fails to guess correctly in 3 attempts,
+#   ask him to try again and exit. If the guess is right print “Right guess” else print “Wrong guess”.
+#   The program should support about 3-4 birds.
+
+
+import random
+
+bird_color = {
+    'parrot': 'green',
+    'dolphin': 'black-white',
+    'macaw': 'blue',
+    'canary': 'yellow'
+}
+
+random_key = random.choice(list(bird_color.keys()))
+
+print(f'What is the color of this bird: {random_key}')
+
+attempts = 3
+
+while attempts > 0:
+    color = input(f'Enter a color (you have {attempts} attempts left): ').strip().lower()
+
+    if color == bird_color[random_key]:
+        print('Right guess!')
+        break
+    else:
+        print('Wrong guess!')
+        attempts -= 1
+
+if attempts == 0:
+    print(f'Sorry, the correct color was {bird_color[random_key]}. Better luck next time!')
+
+#----------------------------------------------------------------------------------------------------------
+
+# 9) Write a guessing game in which the user enters a number and you should tell
+#   if the number the user guessed is less than or greater than the target number.
+#   If the guess if correct “Say correct guess”
+
+target = 75
+
+while True:
+    Guess = float(input('Guess the target number : '))
+    if Guess == target:
+        print("Correct Guess")
+        break
+    elif Guess > target:
+        print("Guess is greater than Target")
+    else:
+        print("Guess is less than Target")
+
+#----------------------------------------------------------------------------------------------------------
