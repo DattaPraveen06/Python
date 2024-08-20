@@ -1,0 +1,11 @@
+# 1) The requirement is to spend money from a piggy bank until there is none left,
+#    however, you can only spend Rs.10 at a time. You will have Rs.100 to start with.
+#    Each time you spend money, you will print the remaining amount of money left in the piggy bank.
+
+Total = 100
+
+while Total > 0:
+    Total = int(Total) - 10
+    print(f'You spent Rs.10 and remaining amount is {Total}')
+
+#----------------------------------------------------------------------------------------------------------
