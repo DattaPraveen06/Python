@@ -144,3 +144,57 @@ while True:
         print("Guess is less than Target")
 
 #----------------------------------------------------------------------------------------------------------
+
+
+#10)     Write a program to calculate the electricity charges based on the following table. An illustration is given.
+        # The program should display the electricity charges for the units consumed along with the Category.
+        #
+        # Domestic consumers who use less than 100 units of electricity will be taxed at LT(1) A tariff rates.
+        # This means that the consumer will pay 1.95 for the first 50 units and 3.1 for the remaining 50 units.
+        # The user has LT(1) B tariff rates if their electricity consumption is greater than 100 units and less than 200 units.
+        # The per unit charge is 3.4 for the first 100 units and 4.8 for the remaining 100 units.
+        # If your total usage exceeds 800, you will be subject to the LT (1) C tariff rates. The price per unit is as follows:
+        # 5.1 for the first 200 units (0-200),
+        # 7.7 for the next 100 units from 201 to 300 units,
+        # 9 for the next 100 units,
+        # 9.5 for the next 400 units, and
+        # 10 for the remaining 800 units
+
+
+def Calculate(units):
+    if units < 0:
+        return "Invalid input"
+    if units < 100:
+        if units<= 50:
+            charges = units * 1.95
+        else:
+            charges = 50 * 1.95 + (units- 50) * 3.1
+    elif units < 200:
+        if units <= 100:
+            charges = units * 3.4
+        else:
+            charges = 100 * 3.4 + (units - 100) * 4.8
+    elif units <= 800:
+        if units<= 300:
+            charges = units * 7.7
+        elif units<= 400:
+            charges = units * 9
+        else:
+            charges = units * 9.5
+        category = "LT(1) C"
+    else:
+        charges = 200 * 5.1 + 100 * 7.7 + 100 * 9 + 400 * 9.5 + (units - 800) * 10
+        category = "Above 800 units"
+
+    return category, charges
+
+try:
+    units_consumed = float(input("Enter the units of electricity consumed: "))
+    category, total_charges = Calculate(units_consumed)
+    print(f"Category: {category}")
+    print(f"Electricity Charges: Rs:{total_charges:.2f}")
+except ValueError:
+    print("Invalid input. Please enter a numeric value.")
+#----------------------------------------------------------------------------------------------------------
+
+
