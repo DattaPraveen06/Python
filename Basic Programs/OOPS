@@ -1,0 +1,20 @@
+# 1) Write a class Person that takes 3 attributes - age, id and name and make them accessible only through getters.
+
+
+class MyClass:
+    def __init__ (self,age,id,name):
+        self.__age = age
+        self.__id = id
+        self.__name = name
+
+    def get_age(self):
+        return self.__age
+    def get_id(self):
+        return self.__id
+    def get_name(self):
+        return self.__name
+
+if __name__ == "__main__":
+    class1 = MyClass(25,101,"game")
+    print(f"Name:{ class1.get_name()}, Age:{ class1.get_age()}, ID:{ class1.get_id()} ")
+_________________________________________________________________________________________________________________________________________________
