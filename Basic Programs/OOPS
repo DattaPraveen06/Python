@@ -19,3 +19,24 @@ if __name__ == "__main__":
     print(f"Name:{ class1.get_name()}, Age:{ class1.get_age()}, ID:{ class1.get_id()} ")
 #----------------------------------------------------------------------------------------------------------------------------
 
+#2)  Write a class User that has 2 attributes - id (integer) and name (string) [Hint: use typing for defining the attribute types}.
+    # Override the equals magic method to define 2 user instances to be equal when their ids are equal.  Show this through an example.
+
+
+class User:
+    def __init__(self, id: int, name: str) -> None:
+        self.id: int = id  # Type hint for id
+        self.name: str = name  # Type hint for name
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, User):
+            return self.id == other.id  # Return True if ids are equal
+        return NotImplemented  # Handle comparison with non-User objects
+
+# Example usage
+a1 = User(1, "Surash")
+a2 = User(1, "Mahesh")
+
+# This will print True since the ids are equal
+print(a1 == a2)  # Output: True
+#----------------------------------------------------------------------------------------------------------------------------
